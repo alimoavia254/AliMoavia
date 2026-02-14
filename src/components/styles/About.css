@@ -1,0 +1,148 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  place-items: center;
+  position: relative;
+  opacity: 1;
+  height: auto;
+  width: var(--cWidth);
+  margin: auto;
+  overflow: hidden;
+}
+.about-me {
+  padding: 40px 0px;
+  padding-bottom: 0;
+  width: 100%;
+  max-width: calc(100% - 15px);
+  position: relative;
+  z-index: 1;
+}
+
+.about-svg-bg {
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 300px;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-animated-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.about-circle-1 {
+  animation: rotate 30s linear infinite;
+  transform-origin: 100px 100px;
+}
+
+.about-circle-2 {
+  animation: rotate 20s linear infinite reverse;
+  transform-origin: 100px 100px;
+}
+
+.about-circle-3 {
+  animation: rotate 15s linear infinite;
+  transform-origin: 100px 100px;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.about-me h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 400;
+  color: var(--accentColor);
+  margin-bottom: 15px;
+}
+
+.about-me p {
+  font-size: clamp(16px, 2vw, 24px);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.about-me .split-word {
+  display: inline-block;
+  margin-right: 0.3em;
+}
+
+.about-me .split-line {
+  display: block;
+}
+
+@media only screen and (min-width: 600px) {
+  .about-section {
+    justify-content: center;
+  }
+  .about-me {
+    width: 500px;
+  }
+  .about-me h3 {
+    font-size: 22px;
+    letter-spacing: 6px;
+  }
+  .about-me p {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about-me {
+    width: 500px;
+    max-width: calc(100% - 70px);
+    transform: translateY(0%);
+  }
+  .about-me h3 {
+    font-size: 25px;
+    letter-spacing: 7px;
+  }
+  .about-me p {
+    font-size: 33px;
+    line-height: 36px;
+  }
+  .about-section {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .about-section {
+    width: var(--cWidth);
+    justify-content: right;
+    max-width: 1920px;
+    height: var(--vh);
+    padding: 0px;
+    opacity: 1;
+  }
+  .about-me {
+    padding: 0px;
+    width: 50%;
+  }
+  .about-me p {
+    font-size: 1.9vw;
+    line-height: 2.3vw;
+  }
+}
+@media only screen and (min-width: 1950px) {
+  .about-me p {
+    font-size: 2.5rem;
+    line-height: 2.7rem;
+  }
+}
